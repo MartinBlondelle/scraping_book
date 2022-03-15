@@ -42,7 +42,10 @@ with open('category_books_urls.csv', 'w') as csv_file:
     for category, link in zip(name_category, links):
         writer.writerow([category, link])
 
+# création du dossier category
+os.makedirs('category')
 
+# création des dossiers par nom de catégorie
 for name in name_category:
     str(name)
     os.makedirs('category/'+ name)
