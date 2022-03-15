@@ -1,5 +1,4 @@
-from sqlite3 import Row
-from urllib import response
+
 import requests
 from bs4 import BeautifulSoup
 import csv
@@ -13,6 +12,7 @@ soup = BeautifulSoup(page, "html.parser")
 
 links = []
 name_category = []
+
 
 # permet d'aller récupérer les liens des catégories
 for ultag in soup.find_all('ul', class_='nav nav-list'):
